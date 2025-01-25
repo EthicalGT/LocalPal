@@ -1,0 +1,60 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - LocalPal</title>
+    <script src="explore.js"></script>
+    <link rel="stylesheet" href="{% static 'css/stylesss.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="{%static 'img/localpal.png'%}" alt="LocalPal Logo">
+            <h1>LocalPal</h1>
+            <p>Helping You Feel at Home, Wherever You Are</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="explore">Explore</a></li>
+                <li><a href="feedback">Feedback</a></li>
+                <li><a href="adminlogin" class="btn-login">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search and Filters Section -->
+    
+    {% if mydata %}
+    <!-- Facilities Grid -->
+    <section class="facilities-grid">
+        {%for data in mydata%}
+            <!-- Example Facility Cards -->
+            <div class="facility-card" data-category="cafes" data-rating="3">
+                <img src="{% static data.img %}" alt="Cafe">
+                <h3>{{data.lg_name}}</h3>
+                <p>{{data.desc}}.</p>
+                <p>Address: {{data.address}}</p>
+                <p>Category: {{data.category}}</p>
+            </div>
+            {%endfor%}
+            {%else%}
+            <p>No Data Found!</p>
+            {%endif%}
+            <br>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Start Your Journey with LocalPal</h2>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
