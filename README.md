@@ -37,6 +37,11 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 
 LocalPal is open-source software licensed under the MIT License.
 
+##Ownership
+
+Originally an idea by Vaishnavi Solunke, developed and coded by me!
+
 ## Contact
 
 For any inquiries or contributions, feel free to reach out on GitHub.
+
